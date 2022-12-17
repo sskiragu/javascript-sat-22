@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function  fetchData(){
+            let response = await fetch('http://universities.hipolabs.com/search?country=United+States');
+            let data = await response.json();
+            let output = '';
+            data.map(item => {
+                output += `
+                    <tr>
+                        <td>${item.name}</td>
+                        </tr>
+                    `;
+            });
+            document.body.innerHTML = `<table>
+                <tr>
+                    <th>Name</th>
+                    </tr>
+                ${output}
+                </table>`;
+        }
+        fetchData();
+    </script>
+</body>
+</html>

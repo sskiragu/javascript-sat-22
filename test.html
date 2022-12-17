@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+fetch('http://universities.hipolabs.com/search?country=United+States')
+	.then(response => response.json())
+	.then(response => display(response))
+	.catch(err => console.error(err));
+
+    function display(data){
+        data.map(item => {
+        console.log(item.name + " " + item.domains)
+    })
+    }
+    </script>
+</body>
+</html>

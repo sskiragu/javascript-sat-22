@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="h">Some stuff here!!</h1>
+    <h1 class="h">Some new stuff here!!</h1>
+    <h1 class="h">Some other new stuff here!!</h1>
+
+    <script>
+        const element = document.querySelectorAll(".h");
+        for (let index = 0; index < element.length; index++) {
+            const myElement = element[index];
+            console.log(myElement.innerHTML);
+            
+        }
+    </script>
+</body>
+</html>

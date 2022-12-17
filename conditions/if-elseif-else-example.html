@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+           Above 70 = A
+           60 - 69  = B
+           50 - 59  = C
+           Below 50 = F
+        */
+        let score = 90;
+        if(score < 50){
+            document.write("F");
+        } else if (score <= 59){
+            document.write("C");
+        } else if (score <= 69) {
+            document.write("B");
+        } else{
+            document.write("A");
+        }
+    </script>
+</body>
+</html>
